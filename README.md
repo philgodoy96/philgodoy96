@@ -1,16 +1,27 @@
-## Hi there 👋
+<h1 align="center">Hi 👋, I'm Felipe Godoy</h1>
+<h3 align="center">AI Engineer in training • Python • LLMs • LangChain • FastAPI • Docker</h3>
 
-<!--
-**philgodoy96/philgodoy96** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+---
 
-Here are some ideas to get you started:
+🌱 I’m currently learning:
+- Building AI-powered APIs with FastAPI
+- Using LangChain with OpenAI + Pinecone
+- Deploying apps with Docker & Render
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+🚀 AI Projects:
+- TarotBot (OpenAI + FastAPI)
+- Job Recommender (scikit-learn + Flask)
+
+🛠️ Tools & Automation:
+- LinkedIn Scraper (Selenium + LangChain)
+- Google Docs → Pinecone Sync (n8n + LangChain)
+
+📫 How to reach me:
+- [LinkedIn](https://www.linkedin.com/in/felipegodoymarques/)
+- [GitHub](https://github.com/philgodoy96)
+- ✉️ felipe.godoy.marques@hotmail.com
+
+---
+
+📌 Fun fact:
+> I built my first AI agent before knowing what an "embedding" was 😅
