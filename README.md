@@ -10,7 +10,6 @@
 
 🚀 AI Projects:
 - TarotBot (OpenAI + FastAPI)
-- Job Recommender (scikit-learn + Flask)
 
 🛠️ Tools & Automation:
 - LinkedIn Scraper (Selenium + LangChain)
