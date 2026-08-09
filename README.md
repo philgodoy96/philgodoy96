@@ -1,127 +1,202 @@
-<h1 align="center">Hi 👋, I'm Felipe Godoy</h1>
+# Hi 👋, I'm Felipe Godoy
 
-<h3 align="center">
-Applied AI Engineer • Python • FastAPI • LLMs • RAG • Automation • Full-Stack AI Products
-</h3>
+### 💡 Backend & AI Systems Engineer • Python • FastAPI • LLM Applications • RAG • Agentic Workflows • Cloud
 
 ---
 
 ## 🚀 About Me
 
-I'm a Computer Science student and Applied AI Engineer focused on building real AI-powered products, automation workflows, and backend systems that connect LLMs to practical user experiences.
+I'm a **Computer Science graduate** focused on building reliable backend systems and production-minded AI applications.
 
-My current focus is on production-minded AI engineering: FastAPI backends, LLM orchestration, prompt design, authentication, quotas, deployment, and clean frontend/backend integration.
+My work sits at the intersection of **backend engineering and applied AI**: LLM orchestration, Retrieval-Augmented Generation, controlled agent workflows, cloud-native processing, observability, evaluation, and automation.
 
-I enjoy building projects that go beyond simple chatbots — products with real user flows, authentication, business logic, AI safety checks, and deployable architectures.
-
----
-
-## 🧠 What I'm Working On
-
-- Building AI-powered applications with **FastAPI, React, and LLM APIs**
-- Designing backend systems for **LLM orchestration, validation, moderation, and quotas**
-- Creating applied AI products with **authentication, deployment, and real user flows**
-- Studying production AI patterns such as **RAG, semantic search, provider abstraction, and reliability**
-- Improving my engineering fundamentals through backend, AI, and automation projects
+I enjoy building systems where AI is part of the actual software architecture — with structured outputs, validation, retries, persistence, cost controls, safety boundaries, and operational visibility — rather than just a model behind a chat interface.
 
 ---
 
-## 💼 Featured AI Projects
+## 💘 Featured Product
 
-### 💘 Maia — AI Relationship Advisor
+### Maia — AI Relationship Advisor
 
-Maia is an AI-powered relationship advisor where users sign in with Google, submit relationship stories and optional conversation screenshots, and receive direct, playful, culturally localized advice.
+**Maia** is an AI-powered relationship advisor that turns complex romantic situations — including optional conversation screenshots — into direct, culturally aware guidance across **27 languages**.
 
-**Highlights:**
+It is a real deployed AI product combining multimodal analysis, localized persona engineering, authentication, safety systems, usage controls, provider failover, private image handling, and cloud infrastructure.
 
-- Supabase Google Auth
-- FastAPI backend
-- Screenshot/image-aware analysis
-- Moderation and intent classification
-- Redis-backed quotas
-- Multi-model LLM orchestration
-- 27-language support
-- Cloudflare frontend + Google Cloud Run backend
+**Engineering highlights:**
 
-🔗 **Live Demo:** [maiatalks.uk](https://maiatalks.uk)
+* 🧠 **Multi-provider LLM orchestration** with Gemini as the primary generation path and Groq/OpenAI fallback capabilities
+* 🖼️ **Multimodal screenshot analysis** using actual image content rather than caption-only substitution
+* 🌍 **27-language productization** with locale-specific prompt packs and culturally adapted tone
+* 🛡️ **Layered AI safety architecture** with intent routing, text/image moderation, crisis handling, and response sanitization
+* 🔐 **Google authentication with Supabase**, authenticated APIs, durable usage controls, and abuse protection
+* ☁️ **Cross-cloud AI integration** with Google Cloud and AWS Rekognition using short-lived workload identity credentials
+* 🗂️ **Private GCS image lifecycle** with opaque image IDs, registry-backed access, expiration, and cleanup
+* 📊 **Usage-aware AI architecture** with separate message, upload, and multimodal analysis quotas
+* ⚙️ **Production-oriented backend** with FastAPI, structured logging, health checks, Sentry, Docker, and automated quality gates
 
----
+**Stack:**
+`Python` · `FastAPI` · `React` · `Vite` · `Supabase Auth/PostgreSQL` · `Gemini` · `Groq` · `OpenAI` · `AWS Rekognition` · `GCS` · `Redis` · `Google Cloud Run` · `Docker` · `Sentry` · `PostHog`
 
-### 🔮 Virtual Tarot — Generative AI Tarot App
-
-Virtual Tarot is a full-stack generative AI application that turns a user's question and selected tarot spread into a personalized interpretation using a hosted LLM.
-
-**Highlights:**
-
-- React/Vite frontend
-- FastAPI backend
-- Groq LLM integration
-- Prompt builder
-- LLM provider abstraction
-- Response sanitization
-- Cloud Run backend deployment
-
-🔗 **Live Demo:** [virtualtarot.vercel.app](https://virtualtarot.vercel.app)
+🔗 **Live:** [maiatalks.uk](https://maiatalks.uk)
 
 ---
 
-## 🛠️ Tech Stack
+## 🧠 Selected Engineering Projects
 
-### Languages & Backend
+### 🤖 [SupportOps AI Platform](https://github.com/philgodoy96/supportops-ai-platform)
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+A production-minded AI support operations backend combining **durable workflow execution, LLM orchestration, RAG, controlled tool calling, human approval, observability, and evaluation**.
 
-### AI & LLMs
+**What it demonstrates:**
 
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge)
-![RAG](https://img.shields.io/badge/RAG-Semantic_Search-blue?style=for-the-badge)
-![LLMs](https://img.shields.io/badge/LLMs-Orchestration-purple?style=for-the-badge)
+* LangGraph as a bounded orchestration layer inside durable application-owned execution
+* PostgreSQL-backed workflow state with leases, fencing tokens, bounded retries, and recovery
+* Application-owned LLM Gateway with provider abstraction and structured outputs
+* Versioned prompts, token accounting, and estimated LLM cost tracking
+* RAG over internal runbooks with Qdrant as a rebuildable retrieval projection
+* Registered tools with durable tool-call audit records
+* Human-in-the-loop approval for sensitive operations
+* Langfuse observability boundary
+* RAGAS-backed evaluation and explicit prompt release governance
+* CI, Docker, migrations, tests, ADRs, and architecture documentation
 
-### Frontend & Deployment
-
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-
-### Automation & Data
-
-![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
-![Pinecone](https://img.shields.io/badge/Pinecone-000000?style=for-the-badge)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+**Stack:**
+`Python` · `FastAPI` · `PostgreSQL` · `LangGraph` · `Qdrant` · `OpenAI` · `Langfuse` · `RAGAS` · `Docker` · `GitHub Actions`
 
 ---
 
-## 📌 Other Projects & Experiments
+### ☁️ [CloudDoc AI Pipeline](https://github.com/philgodoy96/clouddoc-ai-pipeline)
 
-- **Google Docs → Pinecone Sync** — n8n workflow for document updates, embeddings, and vector database sync
-- **Semantic Search APIs** — FastAPI + embeddings + vector search experiments
-- **AI Automation Workflows** — internal tools and automations using LLMs, APIs, and workflow orchestration
-- **Backend Training Projects** — multi-tenant SaaS, job processing systems, billing flows, and reliable LLM services
+A serverless AWS document intelligence pipeline designed around **asynchronous processing, reliability, Infrastructure as Code, and Amazon Bedrock integration**.
+
+**What it demonstrates:**
+
+* Pre-signed document ingestion through Amazon S3
+* Event-driven processing with SQS and Lambda
+* Dead-letter handling and retry-safe processing
+* Amazon Bedrock integration behind an AI provider abstraction
+* Structured AI extraction with validation
+* DynamoDB-backed job state
+* CloudWatch logging and operational visibility
+* IAM-aware AWS architecture
+* Terraform-managed infrastructure
+* GitHub Actions and AWS OIDC-based delivery workflows
+* Mock AI providers for deterministic, cost-free automated testing
+
+**Stack:**
+`Python` · `AWS Lambda` · `API Gateway` · `S3` · `SQS` · `DynamoDB` · `Amazon Bedrock` · `CloudWatch` · `IAM` · `Terraform` · `GitHub Actions`
 
 ---
 
-## 📚 Currently Learning
+### 🏥 [ClinicOps SaaS](https://github.com/philgodoy96/clinicops-saas)
 
-- Advanced FastAPI architecture
-- LLM reliability patterns
-- RAG and semantic search
-- Docker and production deployment
-- Redis, queues, and background jobs
-- Multi-tenant SaaS design
-- Applied AI system design
+A production-minded **multi-tenant clinic management SaaS backend** focused on isolation, authorization, billing reliability, durable jobs, and auditability.
+
+**What it demonstrates:**
+
+* Strict tenant ownership boundaries
+* Membership-based RBAC
+* First-party authentication and refresh-token lifecycle
+* Invitation-based onboarding
+* Subscription and invoice state management
+* Signed payment webhooks and idempotent event processing
+* Durable PostgreSQL-backed background jobs
+* Retry policies and failure recovery
+* Audit logs separated from operational application logging
+* Request and correlation IDs across business workflows
+
+**Stack:**
+`Python` · `FastAPI` · `PostgreSQL` · `SQLAlchemy` · `Alembic` · `Pydantic` · `Docker` · `pytest` · `GitHub Actions`
+
+---
+
+### 🔎 [Incremental RAG Indexing Platform](https://github.com/philgodoy96/incremental-rag-indexing-platform)
+
+A RAG infrastructure project focused on **incremental indexing, retrieval correctness, citation auditability, provider observability, and evaluation**.
+
+**What it demonstrates:**
+
+* Checksum-driven incremental document ingestion
+* Document, section, and chunk versioning
+* Embedding reuse for unchanged content
+* PostgreSQL + pgvector semantic retrieval
+* Query trace persistence
+* Grounded answer generation with durable citations
+* LLM provider abstraction
+* Provider call and usage tracking
+* Retrieval evaluation workflows
+
+**Stack:**
+`Python` · `FastAPI` · `PostgreSQL` · `pgvector` · `Embeddings` · `LLM APIs` · `Docker` · `pytest`
+
+---
+
+## 🎙️ More Applied AI Work
+
+### [AI Clinic Receptionist Platform](https://github.com/philgodoy96/ai-clinic-receptionist-platform)
+
+Production-style AI receptionist focused on appointment workflows, chat and optional voice integration, deterministic backend-managed state, guardrails, durable background jobs, and operational traceability.
+
+---
+
+## 🛠️ Technical Stack
+
+### 🐍 Backend & APIs
+
+`Python` · `FastAPI` · `PostgreSQL` · `SQLAlchemy` · `Alembic` · `Pydantic` · `REST APIs` · `Webhooks` · `Background Jobs` · `RBAC` · `JWT`
+
+### 🧠 AI Engineering
+
+`OpenAI` · `Gemini` · `Groq` · `Amazon Bedrock` · `LLM Orchestration` · `Structured Outputs` · `Prompt Versioning` · `Tool Calling` · `LangGraph` · `RAG` · `Embeddings` · `RAGAS` · `Langfuse`
+
+### 🔎 Retrieval & Data
+
+`PostgreSQL` · `pgvector` · `Qdrant` · `DynamoDB` · `Redis` · `Document Ingestion` · `Semantic Retrieval` · `Vector Search`
+
+### ☁️ Cloud & Infrastructure
+
+`AWS Lambda` · `API Gateway` · `S3` · `SQS` · `DynamoDB` · `Bedrock` · `CloudWatch` · `IAM` · `Google Cloud Run` · `GCS` · `Terraform` · `Docker` · `GitHub Actions` · `CI/CD`
+
+### 🔭 Reliability & Observability
+
+`Structured Logging` · `Request IDs` · `Correlation IDs` · `Audit Logs` · `Retries` · `Idempotency` · `DLQ Patterns` · `Cost Tracking` · `Usage Tracking` · `Langfuse` · `Sentry`
+
+### 🎨 Product & Frontend
+
+`React` · `Vite` · `Supabase` · `PostHog` · `Responsive Product Interfaces`
+
+### 🤝 AI-Assisted Engineering
+
+`Cursor` · `Claude Code` · `GitHub Copilot`
+
+---
+
+## ⚙️ How I Think About Engineering
+
+I care about building systems that are understandable when they fail, not only impressive when they work.
+
+Across my projects, I intentionally emphasize:
+
+* clear architectural boundaries
+* reliable and observable backend workflows
+* deterministic code around probabilistic AI behavior
+* validated model outputs
+* controlled agent execution
+* idempotency and failure recovery
+* cost-aware AI integrations
+* evaluation instead of intuition alone
+* security and privacy boundaries
+* automated testing and CI
+* documented architectural decisions and trade-offs
+* incremental, reviewable Git history
 
 ---
 
 ## 📫 How to Reach Me
 
-- [LinkedIn](https://www.linkedin.com/in/aiwithfelipegodoy/)
-- [GitHub](https://github.com/philgodoy96)
-- ✉️ felipe.godoy.marques@hotmail.com
+* 💼 [LinkedIn](https://www.linkedin.com/in/aiwithfelipegodoy/)
+* 🐙 [GitHub](https://github.com/philgodoy96)
+* ✉️ [felipe.godoy.marques@hotmail.com](mailto:felipe.godoy.marques@hotmail.com)
 
 ---
 
