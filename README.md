@@ -45,19 +45,19 @@ It is a real deployed AI product combining multimodal analysis, localized person
 
 ### 🤖 [SupportOps AI Platform](https://github.com/philgodoy96/supportops-ai-platform)
 
-A production-minded AI support operations backend combining **durable workflow execution, LLM orchestration, RAG, controlled tool calling, human approval, observability, and evaluation**.
+A production-minded AI support operations backend combining **durable PostgreSQL-backed workflow execution, bounded LLM orchestration, context-grounded recommendation generation, controlled tool calling, human approval, observability, and offline evaluation**.
 
 **What it demonstrates:**
 
-* LangGraph as a bounded orchestration layer inside durable application-owned execution
+* LangGraph as a bounded inner orchestration layer inside durable application-owned execution, not the durable system of record
 * PostgreSQL-backed workflow state with leases, fencing tokens, bounded retries, and recovery
 * Application-owned LLM Gateway with provider abstraction and structured outputs
 * Versioned prompts, token accounting, and estimated LLM cost tracking
-* RAG over internal runbooks with Qdrant as a rebuildable retrieval projection
+* RAG over internal runbooks with Qdrant as a rebuildable retrieval projection and stable retrieval-provenance citations
 * Registered tools with durable tool-call audit records
 * Human-in-the-loop approval for sensitive operations
 * Langfuse observability boundary
-* RAGAS-backed evaluation and explicit prompt release governance
+* Offline evaluation with deterministic release gates and optional external RAGAS scoring
 * CI, Docker, migrations, tests, ADRs, and architecture documentation
 
 **Stack:**
@@ -67,20 +67,20 @@ A production-minded AI support operations backend combining **durable workflow e
 
 ### ☁️ [CloudDoc AI Pipeline](https://github.com/philgodoy96/clouddoc-ai-pipeline)
 
-A serverless AWS document intelligence pipeline designed around **asynchronous processing, reliability, Infrastructure as Code, and Amazon Bedrock integration**.
+A serverless AWS document intelligence pipeline with a **deployed and operationally verified `dev` environment**, designed around asynchronous processing, reliability, Infrastructure as Code, and Amazon Bedrock integration.
 
 **What it demonstrates:**
 
 * Pre-signed document ingestion through Amazon S3
-* Event-driven processing with SQS and Lambda
+* Event-driven processing with SQS, Lambda, DLQ, and reconciliation-oriented reliability semantics
 * Dead-letter handling and retry-safe processing
-* Amazon Bedrock integration behind an AI provider abstraction
+* Real Amazon Bedrock runtime invocation behind an AI provider abstraction
 * Structured AI extraction with validation
 * DynamoDB-backed job state
-* CloudWatch logging and operational visibility
+* CloudWatch logging with operational evidence from the verified `dev` runtime
 * IAM-aware AWS architecture
-* Terraform-managed infrastructure
-* GitHub Actions and AWS OIDC-based delivery workflows
+* Terraform-managed infrastructure with separated state, plan, and apply authorization
+* GitHub Actions with GitHub OIDC-based delivery to the AWS `dev` environment
 * Mock AI providers for deterministic, cost-free automated testing
 
 **Stack:**
@@ -94,8 +94,8 @@ A production-minded **multi-tenant clinic management SaaS backend** focused on i
 
 **What it demonstrates:**
 
-* Strict tenant ownership boundaries
-* Membership-based RBAC
+* Application-enforced tenant isolation with server-resolved tenant context and tenant-qualified repositories
+* Membership-based RBAC with an exactly-one-active-owner invariant: PostgreSQL enforces at most one, while transactional workflows preserve at least one
 * First-party authentication and refresh-token lifecycle
 * Invitation-based onboarding
 * Subscription and invoice state management
@@ -112,16 +112,16 @@ A production-minded **multi-tenant clinic management SaaS backend** focused on i
 
 ### 🔎 [Incremental RAG Indexing Platform](https://github.com/philgodoy96/incremental-rag-indexing-platform)
 
-A RAG infrastructure project focused on **incremental indexing, retrieval correctness, citation auditability, provider observability, and evaluation**.
+A RAG infrastructure project focused on **deterministic section-level differential indexing, citation auditability, provider observability, and evaluation**.
 
 **What it demonstrates:**
 
-* Checksum-driven incremental document ingestion
-* Document, section, and chunk versioning
-* Embedding reuse for unchanged content
+* Checksum-driven document no-op with deterministic section-level differential indexing
+* Unchanged sections bypass rechunking through reusable immutable section/chunk materialization
+* Content-addressed embedding reuse as a separate mechanism from section materialization
 * PostgreSQL + pgvector semantic retrieval
 * Query trace persistence
-* Grounded answer generation with durable citations
+* Durable citations with immutable source/version lineage and deterministically validated model-proposed provenance (retrieval provenance, not semantic entailment)
 * LLM provider abstraction
 * Provider call and usage tracking
 * Retrieval evaluation workflows
@@ -135,7 +135,7 @@ A RAG infrastructure project focused on **incremental indexing, retrieval correc
 
 ### [AI Clinic Receptionist Platform](https://github.com/philgodoy96/ai-clinic-receptionist-platform)
 
-Production-style AI receptionist focused on appointment workflows, chat and optional voice integration, deterministic backend-managed state, guardrails, durable background jobs, and operational traceability.
+Production-style AI receptionist for appointment workflows with chat and optional voice integration behind external voice-provider trust boundaries, confirmation-before-side-effect tool use, durable concurrent tool-execution claims, deterministic backend-managed state, guardrails, durable background jobs, operational traceability, and explicit recovery for ambiguous dual-write states where applicable.
 
 ---
 
